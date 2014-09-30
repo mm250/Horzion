@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
     <resources>
         <string name="app_name">Navigation Drawer Example</string>
-        <string-array name="planets_array">
+
+        <string-array name="side_menu_items">
             <item>Mercury</item>
             <item>Venus</item>
             <item>Earth</item>
@@ -11,6 +12,7 @@
             <item>Uranus</item>
             <item>Neptune</item>
         </string-array>
+
         <string name="drawer_open">Open navigation drawer</string>
         <string name="drawer_close">Close navigation drawer</string>
         <string name="action_websearch">Web search</string>
