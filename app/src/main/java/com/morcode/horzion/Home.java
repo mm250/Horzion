@@ -1,9 +1,6 @@
 package com.morcode.horzion;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.SearchManager;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v7.app.ActionBarActivity;
@@ -18,7 +15,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.morcode.horzion.com.morcode.horzion.ui.events.MainMenuEvent;
+
+import de.greenrobot.event.EventBus;
 
 import java.util.Locale;
 
@@ -38,6 +38,8 @@ public class Home extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        EventBus.getDefault().register(this);
 
         mTitle = mDrawerTitle = getTitle();
         mMenuTitles = getResources().getStringArray(R.array.planets_array);
@@ -77,6 +79,10 @@ public class Home extends ActionBarActivity {
         if (savedInstanceState == null) {
             selectItem(0);
         }
+    }
+
+    public void onEventMainThread(MainMenuEvent event) {
+        System.out.println("ererlerl");
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
@@ -125,13 +131,13 @@ public class Home extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        EventBus.getDefault().post(new MainMenuEvent());
 
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
         int id = item.getItemId();
-        System.out.println(android.R.id.home);
-        System.out.println(id);
+
 
         return super.onOptionsItemSelected(item);
     }
