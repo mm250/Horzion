@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
     <resources>
-        <string name="app_name">Navigation Drawer Example</string>
+        <string name="app_name">Hubert and Calvin</string>
 
         <string-array name="side_menu_items">
-            <item>Mercury</item>
-            <item>Venus</item>
-            <item>Earth</item>
-            <item>Mars</item>
-            <item>Jupiter</item>
-            <item>Saturn</item>
-            <item>Uranus</item>
-            <item>Neptune</item>
+            <item>Home</item>
+            <item>Shop</item>
+            <item>About Us</item>
+            <item>Blog</item>
+            <item>Delievery</item>
+            <item>Returns</item>
+            <item>Size</item>
+            <item>Guide</item>
+            <item>Privacy</item>
+            <item>Contact Us</item>
+        </string-array>
+
+        <string-array name="side_menu_layout">
+            <item>Home</item>
+            <item>Shop</item>
+            <item>About Us</item>
+            <item>Blog</item>
+            <item>Delievery</item>
+            <item>Returns</item>
+            <item>Size</item>
+            <item>Guide</item>
+            <item>Privacy</item>
+            <item>Contact Us</item>
         </string-array>
 
         <string name="drawer_open">Open navigation drawer</string>
